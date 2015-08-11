@@ -85,7 +85,7 @@ type Server struct {
 // NewServer is default the Port is set to 80 and the Path is set to `/build`
 func NewServer() *Server {
 	return &Server{
-		Port:   80,
+		Port:   8080,
 		Path:   "/build",
 		Events: make(chan Event, 10), // buffered to 10 items
 	}
@@ -94,7 +94,7 @@ func NewServer() *Server {
 func main() {
 
 	server := NewServer()
-	server.Port = 3000
+	server.Port = 8080
 	server.Secret = "supersecretcode"
 
 	for {
